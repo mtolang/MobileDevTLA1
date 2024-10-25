@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'models/todo.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'screens/todo_screen.dart';
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => TodoProvider(),
+    ProviderScope(
+      // Required for Riverpod
       child: MyApp(),
     ),
   );
